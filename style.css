@@ -10,7 +10,7 @@ ul	{
 
 #banner {
 	height: 46rem;
-	background-image: pippabee.github.io/birds.jpg('birds.jpg');
+	background-image: url('birds.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
