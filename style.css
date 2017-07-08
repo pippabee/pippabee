@@ -8,6 +8,19 @@ ul	{
 	padding: 0;
 }
 
-h1	{
-	font-family: 'Monoton', cursive;
+#banner {
+	height: 46rem;
+	background-image: pippabee.github.io/birds.jpg('birds.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	alogn-items: center;
+	text-align: center;
+}
+
+#banner h1 {
+	font-size: 3.75rem;
+	font-family: 'Contrail One', cursive;
 }
