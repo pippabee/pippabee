@@ -11,13 +11,6 @@ ul	{
 #banner {
 	height: 46rem;
 	background-image: url('birds.jpg');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	display: flex;
-	justify-content: center;
-	alogn-items: center;
-	text-align: center;
 }
 
 #banner h1 {
