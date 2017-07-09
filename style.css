@@ -2,12 +2,6 @@
 	font-family: Helvetica, sans-serif;
 }
 
-ul	{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
 #banner {
 	height: 46rem;
 	background-image: url('birds.jpg');
@@ -23,7 +17,12 @@ ul	{
 	font-family: 'Contrail One', cursive;
 }
 
-li {
-	display: block;
-	width: 5rem;
+.topnav ul {
+	float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
