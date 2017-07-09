@@ -29,7 +29,7 @@ header p {
 .jumbotron {
 	display: flex;
 	align-items: center;
-	background-image: url(pippabee.github.io/birds.jpg)
+	background-image: url(pippabee.github.io/birds.jpg);
 	background-size: cover;
 	height: 500px;
 }
