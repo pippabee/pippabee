@@ -1,0 +1,248 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+
+main {
+	margin: 0 100px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	color: black;
+}
+
+h1 {
+	font-size: 110px;
+	margin: 0;
+}
+
+h2 {
+	font-size: 64px;
+	font-weight: 900;
+	margin: 0;
+}
+
+h3 {
+	font-size: 28px; 
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	line-height: 1.5;
+}
+
+li {
+	font-size: 36px;
+	font-weight: 500;
+}
+
+span {
+	background-color: #FFC4B0;
+	font-style: italic;
+	cursor: url('puke.png'), default;
+}
+
+button {
+	font-family: 'Roboto', sans-serif;
+}
+
+input {
+	border: none;
+	background: lightgrey;
+	padding: 15px 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	font-size: 110px;
+	margin: 10px 0;
+	text-indent: 40px;
+	caret-color: white;
+	width: 100%;
+}
+
+input::placeholder {
+	color: #AC77EE;
+}
+
+input:focus {
+	outline: none;
+	border: none;
+	border-bottom: 10px solid #FFC4B0;
+	margin-bottom: 0;
+}
+/*
+.panel {
+	height: 100%;
+	width: 100%;
+	background-color: lightgrey;
+}
+
+.panel.bottom {
+	margin-bottom: 400px;
+	background-color: black;
+}
+*/
+.footer {
+	background-color: black;
+	color: white;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 20px 100px;
+	text-align: center;
+}
+
+.footer p {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.footer a {
+	text-decoration: underline;
+	color: #FFC4B0;
+}
+
+.footer a:hover {
+	color: #AC77EE;
+	transition: color, .1s;
+
+}
+
+.get-started {
+	padding: 14px 50px;
+	font-size: 18px;
+	margin: 50px 0;
+	border: 3px solid #FFC4B0;
+	font-weight: 900;
+	color: #AC77EE;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.get-started:hover {
+	background: #FFC4B0;
+	cursor: pointer;
+	transition: background, .2s;
+
+}
+
+.get-started:focus {
+	outline: none;
+}
+
+.link {
+	margin: 10px 0;
+	font-size: 36px;
+	padding: 12px 14px;
+	background: #AC77EE;
+	color: white;
+	border: none;
+	text-transform: none;
+	font-weight: 700: 
+}
+
+.link:focus {
+	outline: none;
+}
+
+.link:hover {
+	border: 4px solid #AC77EE;
+	background: white;
+	cursor: pointer;
+	color: #AC77EE;
+	padding: 8px 10px;
+}
+
+.cta {
+	display: flex;
+	justify-content: center;
+}
+
+.logo {
+	font-weight: 900;
+	font-style: italic;
+	font-size: 20px;
+}
+
+.main {
+	margin: 150px 0;
+}
+
+.main:first-of-type {
+	margin-bottom: 300px; 
+}
+
+.term {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-right:  10px;
+}
+.pos {
+	margin: 0 20px;
+	color: #F3AE96; 
+}
+
+.arrow {
+	position: absolute;
+	left: 50%;
+	top: 80%;
+	animation-name: bounce;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+.result-container {
+	display: none;
+}
+
+.aniview {
+    animation-duration: 1s;
+    animation-delay: 0s;
+    transition: all 1s;
+}
+
+
+@keyframes bounce {
+    from {top: 80%;}
+    to {top: 81%;}
+}
+
+#dropdown li {
+	font-size: 110px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	color: lightgrey;
+}
+
+#dropdown li:hover {
+	color: #AC77EE;
+	cursor: pointer;
+}
+
+.top {
+	animation: fade-in 1s, slide 1s;
+}
+
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1;}
+}
+
+@keyframes slide {
+    from {margin-left: 20px;}
+    to {margin-left: : 0;}
+}
+
+
+
+
+
