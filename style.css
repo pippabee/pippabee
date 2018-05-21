@@ -236,7 +236,7 @@ li.result {
 	animation: fade-in 1s, slide 1s;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: center;
 }
 
 .slide {
@@ -349,7 +349,38 @@ li.paginate:nth-of-type(3) {
 		margin: 50px 0;
 	}
 
+}
 
+@media only screen and (min-width: 2048px) {
+	h1 {
+		font-size: 164px;
+	}
+
+	input {
+		font-size: 164px;
+	}
+
+	#dropdown li {
+		font-size: 164px;
+	}
+
+	.arrow {
+		margin: 100px 0;
+	}
+
+	svg {
+		width: 100px;
+		height: 100px;
+	}
+
+	.button {
+		padding: 24px 80px;
+		font-size: 24px;
+	}
+
+	.back {
+		font-size: 16px;
+	}
 
 }
 
