@@ -42,13 +42,19 @@
 	<script>
 		$(document).ready(function(){
 
-
 		//When user changes the search value
 		$('#search').on('keyup',function(){
 			$('#dropdown').empty();
 
 			//store that value as input
 			var input = $(this).val();
+
+			if (input.length > 0) {
+				$('.main').addClass("click");
+			} else {
+				$('.main').removeClass("click");
+			}
+
 
 			if (input.length > 0) {
 
@@ -85,11 +91,10 @@
 					//s$('.input').val('');
 
 
-				});				
+				});
 
-
+			
 			}
-
 
 
 		});

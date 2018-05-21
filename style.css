@@ -263,8 +263,14 @@ li.result {
 
 .main {
 	margin: 30vh 10vw 10vh 10vw;
+	transition: all .35s;
 	/*position: relative;
 	top: 16vh;*/
+}
+
+.click {
+	margin: 10vh 10vw 10vh 10vw;
+	transition: all .5s;
 }
 
 .term h1 {
@@ -322,7 +328,7 @@ li.paginate:nth-of-type(3) {
 }
 
 @keyframes slide {
-    from {margin-left: 10vw;}
+    from {margin-left: 50px;}
     to {margin-left: 0;}
 }
 
