@@ -236,7 +236,7 @@ li.result {
 	animation: fade-in 1s, slide 1s;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-end;
 }
 
 .slide {
@@ -308,6 +308,10 @@ li.result {
 	font-size: 24px;
 }
 
+#search {
+
+}
+
 li.paginate:nth-of-type(3) {
 	display: none;
 }
@@ -318,7 +322,7 @@ li.paginate:nth-of-type(3) {
 }
 
 @keyframes slide {
-    from {margin-left: 20px;}
+    from {margin-left: 10vh;}
     to {margin-left: : 0;}
 }
 
