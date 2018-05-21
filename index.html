@@ -4,137 +4,65 @@
 	<title>gibber.ist</title>
 	<meta charset=”utf-8’>
 	<meta name=”viewport” content=”width=device-width, initial-scale=1, shrink-to-fit=no”>
+	<link href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:700,700i,900,900i" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="jquery.aniview.js"></script>
+	<script type="text/javascript" src="jquery.alton.js"></script>
 </head>
-<body>
-	<main>
+<body class="pageWrapper">
+	<section class="full">
 		<nav>
 			<div>
-				<p class="logo"><a href="index.html">gibber.ist</a></p>
+				<p class="home">gibberist</p>
 			</div>
 		</nav>
-		<section class="top">
-			<div class="main">
-				<h3>Before:</h3>
-				<h1>Sally wanted to <span>sync up</span> on the <span>low hanging fruit.</span></h1>
-			</div>
-		</section>
-		<section class="aniview" data-av-animation="fadeIn">
-			<div class="main">
-				<h3>After:</h3>
-				<h1>Sally wanted to talk about the easiest items to tackle first.</h1>
-				<div class="cta">
-					<button class="get-started">Get Started</button>
+		<div>
+			<section class="slide top">
+				<div>
+					<h3>Before:</h3>
+					<h1>Sally wanted to <span>sync up</span> on the <span>low hanging fruit.</span></h1>
+					<div class="arrow">
+						<svg width="70px" height="70px" viewBox="0 0 224 225" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+					    <desc>Created with Sketch.</desc>
+					    <defs></defs>
+					    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				        <polygon fill="#000000" points="86.9995 0.981533195 86.9995 129.035533 35.9735 78.0075332 0.6175 113.362533 111.9995 224.745533 223.3815 113.362533 188.0265 78.0075332 136.9995 129.035533 136.9995 0.981533195"></polygon></g></svg>
+				    </div>
 				</div>
+			</section>
+			<section class="slide bottom">
+				<div class="aniview" data-av-animation="slideInRight">
+					<h3>After:</h3>
+					<h1>Sally wanted to talk about the easiest items to tackle first.</h1>
+					<div class="cta">
+						<a href="search.html" class="button">Get Started</a>
+					</div>
+				</div>
+			</section>
+		</div>	
+			<div class="footer">
+				<p>Made by <a href="http://pippabradberry.com/" target="_blank">Pippa Bradberry</a></p>
 			</div>
-		</section>
-		<div class="main">
-			<form>
-				<input type="text" placeholder="search" id="search" autocomplete="off">
-			</form>
-			<ul id="dropdown">
-			</ul>
-		</div>
-		<div class="result-container">
-			<div class="term">
-				<h1 class="title"></h1>
-				<h1 class="pos"></h1>
-			</div>
-			<ul class="alt">
-			</ul>
-		</div>
-	</main>
-	<div class="footer">
-		<p>Made by <a href="http://pippabradberry.com/" target="_blank">Pippa Bradberry</a></p>
-	</div>
+	</section>
 </body>
 <script>
 	$(document).ready(function(){
 			var options = {
-		    animateThreshold: 100,
-		    scrollPollInterval: 20
+		    animateThreshold: 50,
 			}
-		$('.aniview').AniView(options);
+		$('.aniview').AniView();
 
-
-		//When user changes the search value
-		$('#search').on('keyup',function(){
-			$('#dropdown').empty();
-
-			//store that value as input
-			var input = $(this).val();
-
-			if (input.length > 0) {
-
-				input = input.toLowerCase();
-				var matches = [];
-
-				//Loop through the set of words to see if input matches any of the words
-				for(let item of words){
-					let word = item.word.toLowerCase();
-
-					if (word.startsWith(input)){
-						matches[word] = item;
-						console.log(matches);
-					}
-				}
-
-				for(var key in matches){
-					//console.log(key);
-					console.log(matches[key])
-					$('#dropdown').append('<li class="result" data-resultkey="'+key+'">'+matches[key].word+'</li>');
-				}
-
-				$('.result').click(function(){
-					let resultkey = $(this).data('resultkey');
-					$('.main').hide();
-					$('.result-container').show();
-					$('.result-container .title').append(matches[resultkey].word);
-
-					for(let altWord of matches[resultkey].alt){
-						$('.result-container .alt').append('<li class="alt-word">'+altWord+'</li>');
-					}
-					//console.log(matches[resultkey]);
-					//$('#dropdown').empty();
-					//s$('.input').val('');
-				});
-			
-
-			}
-
-
-		});
-	
-		/*var words = ['Agile','AI','Alignment','Ballpark','Bandwidth','Best practice','Bleeding edge','Bootstrap','Cadence','Crank','Disrupt','Drill down','Ecosystem','Empower','Enable','Engagement','Evangelist'];*/
-	
-
-		var words = [
-			{word: 'agile', alt: ['nimble', 'lean', 'flexible'], pos: 'adj.'},
-			{word: 'alignment', alt: ['understanding', 'congruity', 'agreement'], pos: 'n.'},
-			{word: 'baked-in', alt: ['included', 'incorporated', 'built in'], pos: 'v.'},	
-			{word: 'ballpark', alt: ['estimate', 'approximate', 'project'], pos: 'n, adj.'},
-			{word: 'bandwidth', alt: ['availability', 'opportunity', 'time'], pos: 'n.'},
-			{word: 'bleeding edge', alt: ['forefront', 'vanguard', 'leading edge'], pos: 'n.'},
-			{word: 'bootstrapped', alt: ['self-funded', 'accomplished with little resources'], pos: 'v.'},
-			{word: 'circle back', alt: ['revisit', 'reexamine'], pos: 'v.'},
-			{word: 'crank', alt: ['hustle', 'push'], pos: 'v.'},
-			{word: 'disrupt', alt: ['transform', 'upheave', 'reform', 'change'], pos: 'v.'},
-			{word: 'drill down', alt: ['review', 'dissect', 'perlustrate'],pos: 'v.'},
-			{word: 'ecosystem', alt: ['suite', 'fabric', 'collection', 'faction'], pos: 'v.'},	
-			{word: 'evangelist', alt: ['champion', 'proponent', 'pioneer'], pos: 'v.'},	
-			{word: 'face time', alt: ['chat', 'huddle', 'meeting'], pos: 'n.'},
-			{word: 'guru', alt: ['master', 'specialist', 'sage'], pos: 'v.'},
-			{word: 'hack', alt: ['workaround', 'shortcut'], pos: 'v.'},
-			{word: 'heavy lifting', alt: ['majority', 'bulk', 'mass'], pos: 'n.'},
-			{word: 'holistic', alt: ['comprehensive', 'absolute', 'blanket'], pos: 'n.'},
-			{word: 'ideation', alt: ['consideration', 'realization'], pos: 'v.'},
-			{word: 'innovative', alt: ['formative', 'prolific', 'inventive'], pos: 'v.'},
-			{word: 'iterate', alt: ['version', 'adapt', 'rework'], pos: 'v.'},
-			{word: 'low hanging fruit', alt: ['easy pickings', 'simple'], pos: 'v.'}
-		]
+	$(document).alton({
+	    fullSlideContainer: 'full', // Tell Alton the full height container
+	    singleSlideClass: 'slide', // Tell Alton the full height slide class
+	    useSlideNumbers: true, // Set to false if you don't want to use pagination
+	    slideNumbersBorderColor: '#AC77EE', // Set the outside color of the pagination items
+	    slideNumbersColor: 'transparent', // Set the inner color of the pagination items
+	    bodyContainer: 'pageWrapper', // Tell Alton the body class
+	});
 
 	});
 
