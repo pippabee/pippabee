@@ -187,6 +187,8 @@ li.result {
 
 .arrow {
 	text-align: center;
+	margin: 50px 0;
+
 }
 
 /*.arrow {
@@ -318,6 +320,27 @@ li.paginate:nth-of-type(3) {
 @keyframes slide {
     from {margin-left: 20px;}
     to {margin-left: : 0;}
+}
+
+@media only screen and (max-width: 1000px) {
+	h1 {
+		font-size: 80px;
+	}
+
+	input {
+		font-size: 80px;
+	}
+
+	#dropdown li {
+		font-size: 80px;
+	}
+
+	.arrow {
+		margin: 50px 0;
+	}
+
+
+
 }
 
 
