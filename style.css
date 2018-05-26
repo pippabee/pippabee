@@ -98,7 +98,6 @@ li.result {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	width: 100vw;
 	padding: 0 10vw;
 }
 
@@ -330,6 +329,29 @@ li.paginate:nth-of-type(3) {
 @keyframes slide {
     from {margin-left: 50px;}
     to {margin-left: 0;}
+}
+
+@media only screen and (max-width: 320px) {
+	h1 {
+		font-size: 44px;
+	}
+
+	.top {
+		animation: none;
+	}
+
+	input {
+		font-size: 44px;
+	}
+
+	#dropdown li {
+		font-size: 44px;
+	}
+
+	.arrow {
+		margin: 50px 0;
+	}
+
 }
 
 @media only screen and (max-width: 1000px) {
